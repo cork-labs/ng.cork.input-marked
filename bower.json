@@ -1,0 +1,39 @@
+{
+  "name": "ng.cork.field-marked",
+  "version": "0.0.1",
+  "description": "AngularJS component that provides a markdown form field",
+  "authors": [
+    "Cork Labs <contact@cork-labs.org> (http://cork-labs.org)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cork-labs/ng.cork.field-marked",
+  "ignore": [
+    "bin",
+    "docs",
+    "grunt",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    ".jsbeautifyrc",
+    ".jshintrc",
+    ".travis.yml",
+    ".yo-rc.json",
+    "Gruntfile.js",
+    "TODO.md",
+    "bootstrap.sh",
+    "package.json",
+    "travis.sh"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cork-labs/ng.cork.field-marked.git"
+  },
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-marked": "~0.0.12",
+    "ng.cork.ui": "~0.0.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.8"
+  }
+}

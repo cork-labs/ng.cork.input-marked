@@ -1,0 +1,31 @@
+@ngdoc overview
+@name ng.cork.field-marked
+@description
+
+> AngularJS component that provides a markdown form field
+
+# Dependencies
+
+- Markdown parser `marked`, provided by [bower:marked](https://github.com/chjj/marked)
+- Directive `marked`, provided by [bower:angular.marked](https://github.com//Hypercubed/angular-marked)
+- Directive `corkUiTextareaAutoResize`, provided by [bower:ng.cork.ui](https://github.com/cork-labs/ng.cork.ui)
+
+
+# Usage
+
+Add the module as a dependency.
+
+<pre>
+angular.module('app', ['ng.cork.field-marked']);
+</pre>
+
+**NOTE:** this is a partial module. Use `ng.cork.ui` instead to include the entire library.
+
+
+## Directive [cork-field-marked](#/api/ng.cork.field-marked.corkFieldMarked)
+
+Add this directive to an element to render a markdown form field.
+
+<pre>
+<div cork-field-marked ng-model="myValue" cork-modes="['edit', 'split']"><div>
+</pre>
