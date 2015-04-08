@@ -1,6 +1,6 @@
 {
   "name": "ng.cork.field-marked",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AngularJS component that provides a markdown form field",
   "author": {
     "name": "Cork Labs",

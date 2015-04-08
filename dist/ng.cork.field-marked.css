@@ -1,5 +1,5 @@
 /**
- * ng.cork.field-marked - v0.0.1 - 2015-04-08
+ * ng.cork.field-marked - v0.0.2 - 2015-04-08
  * https://github.com/cork-labs/ng.cork.field-marked
  *
  * Copyright (c) 2015 Cork Labs <http://cork-labs.org>
