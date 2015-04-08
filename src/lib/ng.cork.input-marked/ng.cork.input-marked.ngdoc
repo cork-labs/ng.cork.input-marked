@@ -19,8 +19,6 @@ Add the module as a dependency.
 angular.module('app', ['ng.cork.input-marked']);
 </pre>
 
-**NOTE:** this is a partial module. Use `ng.cork.ui` instead to include the entire library.
-
 
 ## Directive [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
 

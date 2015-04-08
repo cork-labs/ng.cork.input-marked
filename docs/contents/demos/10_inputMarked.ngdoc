@@ -4,7 +4,63 @@
 
 ## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkTextareaAutoResize)
 
-> Auto-focusing an element on render.
+> All 3 Modes: Preview, Edit and Split
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>All 3 modes: 'preview', 'edit' and 'split'</label>
+                <div cork-input-marked ng-model="text"></div>
+            </div>
+        </div>
+    </doc:source>
+</doc:example>
+
+
+> Restricted to one mode
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>Restricted to 'edit' mode only</label>
+                <div cork-input-marked ng-model="text" cork-modes=['edit']></div>
+            </div>
+        </div>
+    </doc:source>
+</doc:example>
+
+
+> Changing the available modes.
 
 <doc:example module="app" height="400">
     <doc:source>
@@ -12,7 +68,7 @@
         angular.module('app', ['ng.cork.input-marked'])
         .controller('exampleCtrl', [
             '$scope',
-            function ($scope,$window) {
+            function ($scope) {
 
                 $scope.modes = ['edit'];
                 $scope.placeholder = '# enter your markdown here';
@@ -42,15 +98,7 @@
         </style>
         <div data-ng-controller="exampleCtrl" class="container">
             <div class="form-group">
-                <label>All 3 modes: 'preview', 'edit' and 'split'</label>
-                <div cork-input-marked ng-model="text"></div>
-            </div>
-            <div class="form-group">
-                <label>Restricted to 'edit' mode only</label>
-                <div cork-input-marked ng-model="text" cork-modes=['edit']></div>
-            </div>
-            <div class="form-group">
-                <label>Changing the available modes. Current: {{modes || ['preview', 'edit', 'split']}}</label>
+                <label>Current: {{modes || ['preview', 'edit', 'split']}}</label>
                 <div cork-input-marked ng-model="text" cork-modes="modes"></div>
                 <p class="checkbox"><label>
                     <input type="checkbox" ng-model="hasPreview" ng-change="toggle('preview')"/>preview
@@ -62,6 +110,30 @@
                     <input type="checkbox" ng-model="hasSplit" ng-change="toggle('split')"/>split
                 </label></p>
             </div>
+        </div>
+    </doc:source>
+</doc:example>
+
+
+> Enable and disabling.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
             <div class="form-group">
                 <label>Enabling and disabling.</label>
                 <div cork-input-marked ng-model="text" cork-disabled="disabled"></div>
@@ -69,6 +141,30 @@
                     <input type="checkbox" ng-model="disabled"/>disable
                 </label></p>
             </div>
+        </div>
+    </doc:source>
+</doc:example>
+
+
+> Using a placeholder.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
             <div class="form-group">
                 <label>Using a placeholder.</label>
                 <div cork-input-marked ng-model="text" cork-placeholder="placeholder"></div>
