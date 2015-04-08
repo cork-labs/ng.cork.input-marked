@@ -1,24 +1,24 @@
-# ng.cork.field-marked
-[![Build Status: Linux](http://img.shields.io/travis/cork-labs/ng.cork.field-marked/master.svg?style=flat-square)](https://travis-ci.org/cork-labs/ng.cork.field-marked)
-[![Bower version](http://img.shields.io/bower/v/ng.cork.field-marked.svg?style=flat-square)](https://github.com/cork-labs/ng.cork.field-marked)
+# ng.cork.input-marked
+[![Build Status: Linux](http://img.shields.io/travis/cork-labs/ng.cork.input-marked/master.svg?style=flat-square)](https://travis-ci.org/cork-labs/ng.cork.input-marked)
+[![Bower version](http://img.shields.io/bower/v/ng.cork.input-marked.svg?style=flat-square)](https://github.com/cork-labs/ng.cork.input-marked)
 
-> AngularJS component that provides a markdown form field
+> AngularJS component that provides a markdown form input with preview and split modes
 
 
 ## Getting Started
 
-Add **ng.cork.field-marked** to you project.
+Add **ng.cork.input-marked** to you project.
 
 Via bower:
 
 ```
-$ bower install --save ng.cork.field-marked
+$ bower install --save ng.cork.input-marked
 ```
 
 
 Include the following JS and CSS files in your build:
-- `dist/ng.cork.field-marked.js` OR `dist/ng.cork.field-marked.min.js`
-- `dist/ng.cork.field-marked.css` OR `dist/ng.cork.field-marked.min.css`
+- `dist/ng.cork.input-marked.js` OR `dist/ng.cork.input-marked.min.js`
+- `dist/ng.cork.input-marked.css` OR `dist/ng.cork.input-marked.min.css`
 
 The following bower dependencies must also be included:
 - `vendor/marked/marked.min.js`
@@ -27,9 +27,9 @@ The following bower dependencies must also be included:
 
 ## Documentation
 
-Make sure to check the [official documentation](http://jarvis.cork-labs.org/ng.cork.field-marked/current/docs) where you can find a
-[guide](http://jarvis.cork-labs.org/ng.cork.field-marked/current/docs/#/guide), a few [demos](http://jarvis.cork-labs.org/ng.cork.field-marked/current/docs/#/demos) and the complete
-[API reference](http://jarvis.cork-labs.org/ng.cork.field-marked/current/docs/#/docs).
+Make sure to check the [official documentation](http://jarvis.cork-labs.org/ng.cork.input-marked/current/docs) where you can find a
+[guide](http://jarvis.cork-labs.org/ng.cork.input-marked/current/docs/#/guide), a few [demos](http://jarvis.cork-labs.org/ng.cork.input-marked/current/docs/#/demos) and the complete
+[API reference](http://jarvis.cork-labs.org/ng.cork.input-marked/current/docs/#/docs).
 
 
 ## Contributing

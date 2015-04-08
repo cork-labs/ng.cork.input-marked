@@ -1,27 +1,27 @@
 /**
- * ng.cork.field-marked - v0.0.2 - 2015-04-08
- * https://github.com/cork-labs/ng.cork.field-marked
+ * ng.cork.input-marked - v0.0.2 - 2015-04-08
+ * https://github.com/cork-labs/ng.cork.input-marked
  *
  * Copyright (c) 2015 Cork Labs <http://cork-labs.org>
  * License: MIT <http://cork-labs.mit-license.org/2015>
  */
-angular.module('ng.cork.field-marked.templates', []).run(['$templateCache', function($templateCache) {
-$templateCache.put("lib/ng.cork.field-marked/fieldMarked.tpl.html",
-"<div class=\"cork-field-marked {{mode}}\" ng-class=\"{'is-disabled': disabled}\"><div ng-show=\"mode === 'edit' || mode === 'split'\" class=\"markdown-mode markdown-edit\"><textarea class=form-control ng-model=modelValue placeholder={{placeholder}} cork-ui-textarea-auto-resize></textarea><div class=markdown-toolbar><button tab-index=0 class=\"toolbar-button done\" ng-show=\"hasPreview && (mode === 'edit' || mode === 'split')\" class=pull-right ng-click=done()><i class=\"icon fa fa-check\"></i> <span class=text>done</span></button> <button tab-index=0 class=\"toolbar-button split\" ng-show=\"hasSplit && mode === 'edit'\" class=pull-right ng-click=split()><i class=\"icon fa fa-eye\"></i> <span class=text>preview</span></button></div></div><div ng-show=\"mode === 'preview' || mode === 'split'\" class=\"markdown-mode markdown-preview\" ng-click=\"mode === 'preview' ? edit() : noop()\"><div class=markdown-toolbar><button tab-index=0 class=\"toolbar-button edit\" ng-show=\"!disabled && hasEdit && mode === 'preview'\" class=pull-right ng-click=edit()><i class=\"icon fa fa-pencil\"></i> <span class=text>edit</span></button> <button tab-index=0 class=\"toolbar-button edit\" ng-show=\"!disabled && hasEdit && mode === 'split'\" class=pull-right ng-click=edit()><i class=\"icon fa fa-times\"></i> <span class=text>close</span></button></div><div marked=placeholder ng-if=!modelValue></div><div marked=modelValue></div></div></div>");
+angular.module('ng.cork.input-marked.templates', []).run(['$templateCache', function($templateCache) {
+$templateCache.put("lib/ng.cork.input-marked/inputMarked.tpl.html",
+"<div class=\"cork-input-marked {{mode}}\" ng-class=\"{'is-disabled': disabled}\"><div ng-show=\"mode === 'edit' || mode === 'split'\" class=\"markdown-mode markdown-edit\"><textarea class=form-control ng-model=modelValue placeholder={{placeholder}} cork-ui-textarea-auto-resize></textarea><div class=markdown-toolbar><button tab-index=0 class=\"toolbar-button done\" ng-show=\"hasPreview && (mode === 'edit' || mode === 'split')\" class=pull-right ng-click=done()><i class=\"icon fa fa-check\"></i> <span class=text>done</span></button> <button tab-index=0 class=\"toolbar-button split\" ng-show=\"hasSplit && mode === 'edit'\" class=pull-right ng-click=split()><i class=\"icon fa fa-eye\"></i> <span class=text>preview</span></button></div></div><div ng-show=\"mode === 'preview' || mode === 'split'\" class=\"markdown-mode markdown-preview\" ng-click=\"mode === 'preview' ? edit() : noop()\"><div class=markdown-toolbar><button tab-index=0 class=\"toolbar-button edit\" ng-show=\"!disabled && hasEdit && mode === 'preview'\" class=pull-right ng-click=edit()><i class=\"icon fa fa-pencil\"></i> <span class=text>edit</span></button> <button tab-index=0 class=\"toolbar-button edit\" ng-show=\"!disabled && hasEdit && mode === 'split'\" class=pull-right ng-click=edit()><i class=\"icon fa fa-times\"></i> <span class=text>close</span></button></div><div marked=placeholder ng-if=!modelValue></div><div marked=modelValue></div></div></div>");
 }]);
 
 (function (angular) {
     'use strict';
 
-    var module = angular.module('ng.cork.field-marked', [
+    var module = angular.module('ng.cork.input-marked', [
         'hc.marked',
         'ng.cork.ui.textarea-auto-resize',
-        'ng.cork.field-marked.templates'
+        'ng.cork.input-marked.templates'
     ]);
 
     /**
      * @ngdoc directive
-     * @name ng.cork.field-marked.corkFieldMarked
+     * @name ng.cork.input-marked.corkinputMarked
      *
      * @description
      * Provides a markup textarea field with 3 modes: preview, edit and split editing modes.
@@ -36,14 +36,14 @@ $templateCache.put("lib/ng.cork.field-marked/fieldMarked.tpl.html",
      * @param {string=} corkPlaceholder Optional string to add as a placeholder
      * @param {array=} corkModes Array of allowed modes. Defaults to `['preview', 'edit' ,'split']`
      */
-    module.directive('corkFieldMarked', [
+    module.directive('corkinputMarked', [
         '$rootScope',
         '$timeout',
-        function corkFieldMarked($rootScope, $timeout) {
+        function corkinputMarked($rootScope, $timeout) {
 
             return {
                 restrict: 'A',
-                templateUrl: 'lib/ng.cork.field-marked/fieldMarked.tpl.html',
+                templateUrl: 'lib/ng.cork.input-marked/inputMarked.tpl.html',
                 replace: 'element',
                 require: 'ngModel',
                 scope: {

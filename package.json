@@ -1,7 +1,7 @@
 {
-  "name": "ng.cork.field-marked",
+  "name": "ng.cork.input-marked",
   "version": "0.0.2",
-  "description": "AngularJS component that provides a markdown form field",
+  "description": "AngularJS component that provides a markdown form input with preview and split modes",
   "author": {
     "name": "Cork Labs",
     "url":  "http://cork-labs.org"
@@ -15,11 +15,11 @@
   "keywords": [
     "angularjs"
   ],
-  "homepage": "https://github.com/cork-labs/ng.cork.field-marked",
-  "bugs": "https://github.com/cork-labs/ng.cork.field-marked/issues",
+  "homepage": "https://github.com/cork-labs/ng.cork.input-marked",
+  "bugs": "https://github.com/cork-labs/ng.cork.input-marked/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cork-labs/ng.cork.field-marked.git"
+    "url": "git@github.com:cork-labs/ng.cork.input-marked.git"
   },
   "readmeFilename": "README.md",
   "dependencies": {

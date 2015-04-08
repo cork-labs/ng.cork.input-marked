@@ -146,7 +146,7 @@ module.exports = function (grunt, data) {
 
             // used in the name of the template module (results in "my.module.templates")
             // as well as filenames of dist files
-            ngNamespace: 'ng.cork.field-marked',
+            ngNamespace: 'ng.cork.input-marked',
 
             // -- docs related
 
@@ -173,7 +173,7 @@ module.exports = function (grunt, data) {
                     'vendor/angular/angular.js',
                     'vendor/angular-marked/angular-marked.js',
                     'vendor/ng.cork.ui/src/lib/ng.cork.ui.textarea-auto-resize/textareaAutoResize.js',
-                    'src/lib/<%= vars.ngNamespace %>/fieldMarked.js',
+                    'src/lib/<%= vars.ngNamespace %>/inputMarked.js',
                     'src/lib/<%= vars.ngNamespace %>/<%= vars.ngNamespace %>.templates.js'
                 ],
                 examplesStyles: [

@@ -2,14 +2,14 @@
 @name API Reference
 @description
 
-# ng.cork.field-marked API Reference
+# ng.cork.input-marked API Reference
 
-> Welcome to the **ng.cork.field-marked** API reference.
+> Welcome to the **ng.cork.input-marked** API reference.
 
-If you want to know how **ng.cork.field-marked** works, checkout the {@link guide/ guide} and the {@link demos/ demos}.
+If you want to know how **ng.cork.input-marked** works, checkout the {@link guide/ guide} and the {@link demos/ demos}.
 
 
 ## Modules
 
-- **[ng.cork.field-marked](#/api/ng.cork.field-marked)** - Provides a configurable service that divides numbers by X, as well as a directive and a filter.
+- **[ng.cork.input-marked](#/api/ng.cork.input-marked)** - Provides a configurable service that divides numbers by X, as well as a directive and a filter.
 

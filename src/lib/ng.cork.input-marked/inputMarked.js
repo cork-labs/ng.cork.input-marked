@@ -1,15 +1,15 @@
 (function (angular) {
     'use strict';
 
-    var module = angular.module('ng.cork.field-marked', [
+    var module = angular.module('ng.cork.input-marked', [
         'hc.marked',
         'ng.cork.ui.textarea-auto-resize',
-        'ng.cork.field-marked.templates'
+        'ng.cork.input-marked.templates'
     ]);
 
     /**
      * @ngdoc directive
-     * @name ng.cork.field-marked.corkFieldMarked
+     * @name ng.cork.input-marked.corkInputMarked
      *
      * @description
      * Provides a markup textarea field with 3 modes: preview, edit and split editing modes.
@@ -24,14 +24,14 @@
      * @param {string=} corkPlaceholder Optional string to add as a placeholder
      * @param {array=} corkModes Array of allowed modes. Defaults to `['preview', 'edit' ,'split']`
      */
-    module.directive('corkFieldMarked', [
+    module.directive('corkInputMarked', [
         '$rootScope',
         '$timeout',
-        function corkFieldMarked($rootScope, $timeout) {
+        function corkInputMarked($rootScope, $timeout) {
 
             return {
                 restrict: 'A',
-                templateUrl: 'lib/ng.cork.field-marked/fieldMarked.tpl.html',
+                templateUrl: 'lib/ng.cork.input-marked/inputMarked.tpl.html',
                 replace: 'element',
                 require: 'ngModel',
                 scope: {

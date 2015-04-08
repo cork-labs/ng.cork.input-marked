@@ -1,10 +1,10 @@
 {
   "generator-nglib": {
-    "project.name": "ng.cork.field-marked",
-    "project.description": "AngularJS component that provides a markdown form field",
-    "bower.id": "ng.cork.field-marked",
+    "project.name": "ng.cork.input-marked",
+    "project.description": "AngularJS component that provides a markdown form input with preview and split modes",
+    "bower.id": "ng.cork.input-marked",
     "npm.id": null,
-    "angular.module": "ng.cork.field-marked",
+    "angular.module": "ng.cork.input-marked",
     "has.tpl": true,
     "has.css": true,
     "has.less": true,
@@ -12,17 +12,17 @@
     "has.docs": true,
     "use.git": true,
     "github.username": "cork-labs",
-    "github.reponame": "ng.cork.field-marked",
-    "homepage.url": "https://github.com/cork-labs/ng.cork.field-marked",
-    "docs.url": "http://jarvis.cork-labs.org/ng.cork.field-marked/current/docs",
-    "bugs.url": "https://github.com/cork-labs/ng.cork.field-marked/issues",
+    "github.reponame": "ng.cork.input-marked",
+    "homepage.url": "https://github.com/cork-labs/ng.cork.input-marked",
+    "docs.url": "http://jarvis.cork-labs.org/ng.cork.input-marked/current/docs",
+    "bugs.url": "https://github.com/cork-labs/ng.cork.input-marked/issues",
     "license.name": "MIT",
     "license.url": "http://cork-labs.mit-license.org/2015",
     "author.name": "Cork Labs",
     "author.email": "contact@cork-labs.org",
     "author.url": "http://cork-labs.org",
     "use.travis": true,
-    "travis.id": "cork-labs/ng.cork.field-marked",
-    "repo.url": "git@github.com:cork-labs/ng.cork.field-marked.git"
+    "travis.id": "cork-labs/ng.cork.input-marked",
+    "repo.url": "git@github.com:cork-labs/ng.cork.input-marked.git"
   }
 }
