@@ -1,6 +1,6 @@
 {
   "name": "ng.cork.input-marked",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "AngularJS component that provides a markdown form input with preview and split modes",
   "authors": [
     "Cork Labs <contact@cork-labs.org> (http://cork-labs.org)"
