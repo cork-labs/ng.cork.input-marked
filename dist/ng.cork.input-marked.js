@@ -1,5 +1,5 @@
 /**
- * ng.cork.input-marked - v0.0.2 - 2015-04-08
+ * ng.cork.input-marked - v0.0.2 - 2015-04-09
  * https://github.com/cork-labs/ng.cork.input-marked
  *
  * Copyright (c) 2015 Cork Labs <http://cork-labs.org>
@@ -21,7 +21,7 @@ $templateCache.put("lib/ng.cork.input-marked/inputMarked.tpl.html",
 
     /**
      * @ngdoc directive
-     * @name ng.cork.input-marked.corkinputMarked
+     * @name ng.cork.input-marked.corkInputMarked
      *
      * @description
      * Provides a markup textarea field with 3 modes: preview, edit and split editing modes.
@@ -36,10 +36,10 @@ $templateCache.put("lib/ng.cork.input-marked/inputMarked.tpl.html",
      * @param {string=} corkPlaceholder Optional string to add as a placeholder
      * @param {array=} corkModes Array of allowed modes. Defaults to `['preview', 'edit' ,'split']`
      */
-    module.directive('corkinputMarked', [
+    module.directive('corkInputMarked', [
         '$rootScope',
         '$timeout',
-        function corkinputMarked($rootScope, $timeout) {
+        function corkInputMarked($rootScope, $timeout) {
 
             return {
                 restrict: 'A',
