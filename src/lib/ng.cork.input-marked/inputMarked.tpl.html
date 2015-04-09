@@ -6,12 +6,12 @@
 
         <div class="cork-im-toolbar">
             <button tab-index="0" class="cork-im-toolbar-btn cork-im-done" ng-show="hasPreview && (mode === 'edit' || mode === 'split')" class="pull-right" ng-click="done()">
-                <i class="cork-im-icon fa fa-check"></i>
-                <span class="cork-im-text">done</span>
+                <i class="cork-icon fa fa-check"></i>
+                <span class="cork-icon-text">done</span>
             </button>
             <button tab-index="0" class="cork-im-toolbar-btn cork-im-split" ng-show="hasSplit && mode === 'edit'" class="pull-right" ng-click="split()">
-                <i class="cork-im-icon fa fa-eye"></i>
-                <span class="cork-im-text">preview</span>
+                <i class="cork-icon fa fa-eye"></i>
+                <span class="cork-icon-text">preview</span>
             </button>
         </div>
 
@@ -21,17 +21,19 @@
 
         <div class="cork-im-toolbar">
             <button tab-index="0" class="cork-im-toolbar-btn cork-im-edit" ng-show="!disabled && hasEdit && mode === 'preview'" class="pull-right" ng-click="edit()">
-                <i class="cork-im-icon fa fa-pencil"></i>
-                <span class="cork-im-text">edit</span>
+                <i class="cork-icon fa fa-pencil"></i>
+                <span class="cork-icon-text">edit</span>
             </button>
             <button tab-index="0" class="cork-im-toolbar-btn edit" ng-show="!disabled && hasEdit && mode === 'split'" class="pull-right" ng-click="edit()">
-                <i class="cork-im-icon fa fa-times"></i>
-                <span class="cork-im-text">close</span>
+                <i class="cork-icon fa fa-times"></i>
+                <span class="cork-icon-text">close</span>
             </button>
         </div>
 
-        <div marked="placeholder" ng-if="!modelValue"></div>
-        <div marked="modelValue"></div>
+        <div class="cork-im-markdown">
+            <div marked="placeholder" ng-if="!modelValue"></div>
+            <div marked="modelValue"></div>
+        </div>
 
     </div>
 </div>

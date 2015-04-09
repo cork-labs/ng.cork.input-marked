@@ -5,94 +5,101 @@
     padding-bottom: 5px;
     height: auto;
 
-    .cork-im-panel {
-        position: relative;
-        padding: 0 40px 0 0;
+    .cork-icon {
+        line-height: 2em;
+        width: 2em;
+        text-align: center;
     }
-
-    .cork-im-toolbar {
-
-        position: absolute;
-        top: 2px;
-        right: 2px;
+    .cork-icon-text {
+        display: none;
     }
+}
+
+.cork-im-panel {
+    position: relative;
+    padding: 0 2.5em 0 0;
+}
+
+.cork-im-toolbar {
+
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.cork-im-toolbar-btn {
+    display: block;
+    margin: 0 0 8px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover, &:active {
+        opacity: 1;
+    }
+}
+
+.cork-im-panel-preview {
+
+    min-height: 2em;
+
+    p {
+        margin-bottom: 22px;
+    }
+}
+
+.cork-im-markdown {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.cork-im-panel-edit {
+
+    overflow-y: auto;
+
+    textarea {
+        box-sizing: border-box; // fix: avoids panel horiz overflow when padding/border
+        overflow-y: hidden;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 6em;
+        line-height: 22px;
+        margin: 0;
+        padding: 0 0 5px; // fix: issue with textarea-auto-resize directive (little jump in scrollbar) when cursor is at the end and user presses Enter
+    }
+}
+
+.cork-input-marked:hover {
 
     .cork-im-toolbar-btn {
-        display: block;
-        margin: 0 0 8px;
-        padding: 0;
-        line-height: 32px;
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        .cork-im-text {
-            display: none;
-        }
-    }
-
-    .cork-im-icon {
-        width: 32px;
-        text-align: center;
     }
 
     .cork-im-panel-preview {
 
-        min-height: 2em;
-        background: rgba(255, 255, 255, 0.5);
-
-        p {
-            margin-bottom: 22px;
-        }
     }
+}
+
+.cork-input-marked.cork-im-preview {
+
+    cursor: text;
+}
+
+.cork-input-marked.cork-im-split {
 
     .cork-im-panel-edit {
-
-        overflow-y: auto;
+        float: left;
+        width: 45%;
+        min-width: 50%;
+        max-width: 50%;
 
         textarea {
-            box-sizing: border-box; // fix: avoids panel horiz overflow when padding/border
-            overflow-y: hidden;
-            min-width: 100%;
-            max-width: 100%;
-            min-height: 6em;
-            line-height: 22px;
-            margin: 0;
-            padding: 0 0 5px; // fix: issue with textarea-auto-resize directive (little jump in scrollbar) when cursor is at the end and user presses Enter
+            width: 100%;
         }
     }
 
-    &:hover {
-
-        .cork-im-toolbar-btn {
-        }
-
-        .cork-im-panel-preview {
-
-        }
-    }
-
-    &.cork-im-preview {
-
-        cursor: text;
-    }
-
-    &.cork-im-split {
-
-        .cork-im-panel-edit {
-            float: left;
-            width: 45%;
-            min-width: 50%;
-            max-width: 50%;
-
-            textarea {
-                width: 100%;
-            }
-        }
-
-        .cork-im-panel-preview {
-            float: right;
-            width: 48%;
-        }
+    .cork-im-panel-preview {
+        float: right;
+        width: 48%;
     }
 }
