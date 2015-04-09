@@ -1,0 +1,33 @@
+@ngdoc overview
+@name Placeholder
+@description
+
+## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
+
+> Using a placeholder.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>Using a placeholder.</label>
+                <div cork-input-marked ng-model="text" cork-placeholder="placeholder"></div>
+                <input class="form-control" type="text" ng-model="placeholder" />
+            </div>
+        </div>
+    </doc:source>
+</doc:example>

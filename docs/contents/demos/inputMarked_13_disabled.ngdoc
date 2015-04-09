@@ -1,0 +1,35 @@
+@ngdoc overview
+@name Disabled
+@description
+
+## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
+
+> Enabling and disabling the input programatically.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>Enabling and disabling.</label>
+                <div cork-input-marked ng-model="text" cork-disabled="disabled"></div>
+                <p class="checkbox"><label>
+                    <input type="checkbox" ng-model="disabled"/>disable
+                </label></p>
+            </div>
+        </div>
+    </doc:source>
+</doc:example>

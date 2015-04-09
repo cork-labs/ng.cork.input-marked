@@ -1,0 +1,32 @@
+@ngdoc overview
+@name Basic 3 Modes
+@description
+
+## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
+
+> Basic example with all 3 Modes: Preview, Edit and Split.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [ function() {} ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>All 3 modes: 'preview', 'edit' and 'split'</label>
+                <div cork-input-marked ng-model="text"></div>
+            </div>
+        </div>
+    </doc:source>
+</doc:example>

@@ -1,0 +1,59 @@
+@ngdoc overview
+@name Changing Modes
+@description
+
+## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
+
+> Changing the available modes programatically after rendering.
+
+<doc:example module="app" height="400">
+    <doc:source>
+        <script>
+        angular.module('app', ['ng.cork.input-marked'])
+        .controller('exampleCtrl', [
+            '$scope',
+            function ($scope) {
+
+                $scope.modes = ['edit'];
+                $scope.placeholder = '# enter your markdown here';
+                $scope.hasEdit = true;
+
+                $scope.toggle = function (mode) {
+                    var index = $scope.modes.indexOf(mode);
+                    if (index === -1) {
+                        $scope.modes.push(mode);
+                    }
+                    else {
+                        $scope.modes.splice(index, 1);
+                    }
+                };
+            }
+        ]);
+        </script>
+        <style>
+        .container {
+           padding: 10px;
+        }
+        .form-group {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed black;
+        }
+        </style>
+        <div data-ng-controller="exampleCtrl" class="container">
+            <div class="form-group">
+                <label>Current: {{modes || ['preview', 'edit', 'split']}}</label>
+                <div cork-input-marked ng-model="text" cork-modes="modes"></div>
+                <p class="checkbox"><label>
+                    <input type="checkbox" ng-model="hasPreview" ng-change="toggle('preview')"/>preview
+                </label></p>
+                <p class="checkbox"><label>
+                    <input type="checkbox" ng-model="hasEdit" ng-change="toggle('edit')"/>edit
+                </label></p>
+                <p class="checkbox"><label>
+                    <input type="checkbox" ng-model="hasSplit" ng-change="toggle('split')"/>split
+                </label></p>
+            </div>
+        </div>
+    </doc:source>
+</doc:example>
