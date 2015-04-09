@@ -2,7 +2,7 @@
 @name cork-input-marked
 @description
 
-## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkTextareaAutoResize)
+## Directive: [cork-input-marked](#/api/ng.cork.input-marked.corkInputMarked)
 
 > All 3 Modes: Preview, Edit and Split
 

@@ -89,7 +89,7 @@ module.exports = function (grunt, data) {
                 '<%= paths.vendor %>/marked/marked.min.js',
                 '<%= paths.vendor %>/angular/angular.js',
                 '<%= paths.vendor %>/angular-marked/angular-marked.js',
-                '<%= paths.vendor %>/ng.cork.ui/src/lib/ng.cork.ui.textarea-auto-resize/textareaAutoResize.js'
+                '<%= paths.vendor %>/ng.cork.ui.textarea-auto-resize/dist/ng.cork.ui.textarea-auto-resize.min.js'
             ],
 
             // test only dependencies
@@ -172,7 +172,7 @@ module.exports = function (grunt, data) {
                     'vendor/marked/marked.min.js',
                     'vendor/angular/angular.js',
                     'vendor/angular-marked/angular-marked.js',
-                    'vendor/ng.cork.ui/src/lib/ng.cork.ui.textarea-auto-resize/textareaAutoResize.js',
+                    '<%= paths.vendor %>/ng.cork.ui.textarea-auto-resize/dist/ng.cork.ui.textarea-auto-resize.min.js',
                     'src/lib/<%= vars.ngNamespace %>/inputMarked.js',
                     'src/lib/<%= vars.ngNamespace %>/<%= vars.ngNamespace %>.templates.js'
                 ],
