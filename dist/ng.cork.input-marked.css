@@ -1,5 +1,5 @@
 /**
- * ng.cork.input-marked - v0.0.3 - 2015-04-09
+ * ng.cork.input-marked - v0.0.4 - 2015-04-10
  * https://github.com/cork-labs/ng.cork.input-marked
  *
  * Copyright (c) 2015 Cork Labs <http://cork-labs.org>
@@ -14,42 +14,49 @@
   padding-bottom: 5px;
   height: auto;
 }
-.cork-input-marked .cork-im-panel {
-  position: relative;
-  padding: 0 40px 0 0;
+.cork-input-marked .cork-icon {
+  line-height: 2em;
+  width: 2em;
+  text-align: center;
 }
-.cork-input-marked .cork-im-toolbar {
+.cork-input-marked .cork-icon-text {
+  display: none;
+}
+.cork-im-panel {
+  position: relative;
+  padding: 0 2.5em 0 0;
+}
+.cork-im-toolbar {
   position: absolute;
   top: 2px;
   right: 2px;
 }
-.cork-input-marked .cork-im-toolbar-btn {
+.cork-im-toolbar-btn {
   display: block;
   margin: 0 0 8px;
   padding: 0;
-  line-height: 32px;
   background: none;
   border: none;
   cursor: pointer;
+  opacity: 0.8;
 }
-.cork-input-marked .cork-im-toolbar-btn .cork-im-text {
-  display: none;
+.cork-im-toolbar-btn:hover,
+.cork-im-toolbar-btn:active {
+  opacity: 1;
 }
-.cork-input-marked .cork-im-icon {
-  width: 32px;
-  text-align: center;
-}
-.cork-input-marked .cork-im-panel-preview {
+.cork-im-panel-preview {
   min-height: 2em;
-  background: rgba(255, 255, 255, 0.5);
 }
-.cork-input-marked .cork-im-panel-preview p {
+.cork-im-panel-preview p {
   margin-bottom: 22px;
 }
-.cork-input-marked .cork-im-panel-edit {
+.cork-im-markdown {
+  background: rgba(255, 255, 255, 0.5);
+}
+.cork-im-panel-edit {
   overflow-y: auto;
 }
-.cork-input-marked .cork-im-panel-edit textarea {
+.cork-im-panel-edit textarea {
   box-sizing: border-box;
   overflow-y: hidden;
   min-width: 100%;
