@@ -20,7 +20,7 @@
      * @restrict A
      * @requires ngModel
      *
-     * @param {boolean=} corkDisabled Optionally expression to enable/disable the field.
+     * @param {boolean=} corkDisabled Optional expression to enable/disable the field.
      * @param {string=} corkPlaceholder Optional string to add as a placeholder
      * @param {array=} corkModes Array of allowed modes. Defaults to `['preview', 'edit' ,'split']`
      */

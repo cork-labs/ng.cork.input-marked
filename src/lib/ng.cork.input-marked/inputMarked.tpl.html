@@ -1,34 +1,35 @@
-<div class="cork-input-marked {{mode}}" ng-class="{'is-disabled': disabled}">
+<div class="cork-input-marked cork-im-mode-{{mode}}" ng-class="{'cork-is-disabled': disabled}">
 
-    <div ng-show="mode === 'edit' || mode === 'split'" class="markdown-mode markdown-edit">
+    <div ng-show="mode === 'edit' || mode === 'split'" class="cork-im-panel cork-im-panel-edit">
 
         <textarea class="form-control" ng-model="modelValue" placeholder="{{placeholder}}" cork-ui-textarea-auto-resize></textarea>
 
-        <div class="markdown-toolbar">
-            <button tab-index="0" class="toolbar-button done" ng-show="hasPreview && (mode === 'edit' || mode === 'split')" class="pull-right" ng-click="done()">
-                <i class="icon fa fa-check"></i>
-                <span class="text">done</span>
+        <div class="cork-im-toolbar">
+            <button tab-index="0" class="cork-im-toolbar-button cork-im-done" ng-show="hasPreview && (mode === 'edit' || mode === 'split')" class="pull-right" ng-click="done()">
+                <i class="cork-im-icon fa fa-check"></i>
+                <span class="cork-im-text">done</span>
             </button>
-            <button tab-index="0" class="toolbar-button split" ng-show="hasSplit && mode === 'edit'" class="pull-right" ng-click="split()">
-                <i class="icon fa fa-eye"></i>
-                <span class="text">preview</span>
+            <button tab-index="0" class="cork-im-toolbar-button cork-im-split" ng-show="hasSplit && mode === 'edit'" class="pull-right" ng-click="split()">
+                <i class="cork-im-icon fa fa-eye"></i>
+                <span class="cork-im-text">preview</span>
             </button>
         </div>
 
     </div>
 
-    <div ng-show="mode === 'preview' || mode === 'split'" class="markdown-mode markdown-preview" ng-click="mode === 'preview' ? edit() : noop()">
+    <div ng-show="mode === 'preview' || mode === 'split'" class="cork-im-panel cork-im-panel-preview" ng-click="mode === 'preview' ? edit() : noop()">
 
-        <div class="markdown-toolbar">
-            <button tab-index="0" class="toolbar-button edit" ng-show="!disabled && hasEdit && mode === 'preview'" class="pull-right" ng-click="edit()">
-                <i class="icon fa fa-pencil"></i>
-                <span class="text">edit</span>
+        <div class="cork-im-toolbar">
+            <button tab-index="0" class="cork-im-toolbar-button cork-im-edit" ng-show="!disabled && hasEdit && mode === 'preview'" class="pull-right" ng-click="edit()">
+                <i class="cork-im-icon fa fa-pencil"></i>
+                <span class="cork-im-text">edit</span>
             </button>
-            <button tab-index="0" class="toolbar-button edit" ng-show="!disabled && hasEdit && mode === 'split'" class="pull-right" ng-click="edit()">
-                <i class="icon fa fa-times"></i>
-                <span class="text">close</span>
+            <button tab-index="0" class="cork-im-toolbar-button edit" ng-show="!disabled && hasEdit && mode === 'split'" class="pull-right" ng-click="edit()">
+                <i class="cork-im-icon fa fa-times"></i>
+                <span class="cork-im-text">close</span>
             </button>
         </div>
+
         <div marked="placeholder" ng-if="!modelValue"></div>
         <div marked="modelValue"></div>
 

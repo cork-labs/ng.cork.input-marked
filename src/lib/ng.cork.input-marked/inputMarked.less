@@ -5,19 +5,19 @@
     padding-bottom: 5px;
     height: auto;
 
-    .markdown-mode {
+    .cork-im-panel {
         position: relative;
         padding: 0 40px 0 0;
     }
 
-    .markdown-toolbar {
+    .cork-im-toolbar {
 
         position: absolute;
         top: 2px;
         right: 2px;
     }
 
-    .toolbar-button {
+    .cork-im-toolbar-button {
         display: block;
         margin: 0 0 8px;
         padding: 0;
@@ -26,17 +26,17 @@
         border: none;
         cursor: pointer;
 
-        .text {
+        .cork-im-text {
             display: none;
         }
     }
 
-    .icon {
+    .cork-im-icon {
         width: 32px;
         text-align: center;
     }
 
-    .markdown-preview {
+    .cork-im-panel-preview {
 
         min-height: 2em;
         background: rgba(255, 255, 255, 0.5);
@@ -46,43 +46,40 @@
         }
     }
 
-    .markdown-edit {
+    .cork-im-panel-edit {
 
-        overflow: auto;
+        overflow-y: auto;
 
         textarea {
+            box-sizing: border-box; // fix: avoids panel horiz overflow when padding/border
             overflow-y: hidden;
             min-width: 100%;
             max-width: 100%;
             min-height: 6em;
             line-height: 22px;
             margin: 0;
+            padding: 0 0 5px; // fix: issue with textarea-auto-resize directive (little jump in scrollbar) when cursor is at the end and user presses Enter
         }
     }
 
     &:hover {
 
-        .toolbar-button {
+        .cork-im-toolbar-button {
         }
 
-        .markdown-preview {
+        .cork-im-panel-preview {
 
         }
     }
 
-    &.preview {
+    &.cork-im-preview {
 
         cursor: text;
     }
 
-    &.disabled.preview {
+    &.cork-im-split {
 
-        cursor: default;
-    }
-
-    &.split {
-
-        .markdown-edit {
+        .cork-im-panel-edit {
             float: left;
             width: 45%;
             min-width: 50%;
@@ -93,7 +90,7 @@
             }
         }
 
-        .markdown-preview {
+        .cork-im-panel-preview {
             float: right;
             width: 48%;
         }
