@@ -1,5 +1,5 @@
 /**
- * ng.cork.input-marked - v0.0.5 - 2015-04-16
+ * ng.cork.input-marked - v0.0.6 - 2015-05-11
  * https://github.com/cork-labs/ng.cork.input-marked
  *
  * Copyright (c) 2015 Cork Labs <http://cork-labs.org>
